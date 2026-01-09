@@ -37,7 +37,6 @@ Requirement Analysis: Identified needs of citizens and authorities
 System Design: Role-based architecture with REST APIs
 Implementation: Frontend (HTML/CSS/JS) + Backend (FastAPI)
 Testing: API testing, role-based access testing
-Deployment: Docker-ready backend with PostgreSQL
 Maintenance: Scalable design for future enhancements
 
 ## Tech Stack
