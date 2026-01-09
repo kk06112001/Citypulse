@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.register-container {
+    width: 100%;
+    max-width: 450px;
+    padding: 20px;
+}
+
+.register-card {
+    background: #ffffff;
+    padding: 35px 30px;
+    border-radius: 14px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    text-align: center;
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+.register-card h1 {
+    color: #1e3c72;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Input fields */
+.input-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 10px;
+    font-size: 16px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    outline: none;
+    background: transparent;
+}
+
+.input-group label {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 14px;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.input-group input:focus,
+.input-group input:valid {
+    border-bottom-color: #1e3c72;
+}
+
+.input-group input:focus + label,
+.input-group input:valid + label {
+    top: -6px;
+    font-size: 12px;
+    color: #1e3c72;
+}
+
+/* Button */
+.register-btn {
+    width: 100%;
+    padding: 12px;
+    background: #1e3c72;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.register-btn:hover {
+    background: #16315f;
+    transform: translateY(-1px);
+}
+
+/* Login link */
+.login-text {
+    margin-top: 18px;
+    font-size: 14px;
+}
+
+.login-text a {
+    color: #1e3c72;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-text a:hover {
+    text-decoration: underline;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .register-card {
+        padding: 30px 20px;
+    }
+}

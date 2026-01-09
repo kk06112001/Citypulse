@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #141e30, #243b55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Container */
+.login-container {
+    width: 100%;
+    max-width: 420px;
+    padding: 20px;
+}
+
+/* Card */
+.login-card {
+    background: #ffffff;
+    padding: 35px 30px;
+    border-radius: 14px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+    text-align: center;
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+.login-card h1 {
+    color: #141e30;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* Inputs */
+.input-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 10px;
+    font-size: 16px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    outline: none;
+    background: transparent;
+}
+
+.input-group label {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 14px;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.input-group input:focus,
+.input-group input:valid {
+    border-bottom-color: #141e30;
+}
+
+.input-group input:focus + label,
+.input-group input:valid + label {
+    top: -6px;
+    font-size: 12px;
+    color: #141e30;
+}
+
+/* Button */
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.admin-btn {
+    background: #141e30;
+    color: #fff;
+}
+
+.admin-btn:hover {
+    background: #0f1724;
+    transform: translateY(-1px);
+}
+
+/* Footer note */
+.admin-note {
+    margin-top: 18px;
+    font-size: 13px;
+    color: #777;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .login-card {
+        padding: 30px 20px;
+    }
+}

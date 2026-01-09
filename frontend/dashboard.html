@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CityPulse | Citizen Dashboard</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">CityPulse</div>
+    <button class="logout-btn" onclick="logout()">Logout</button>
+</nav>
+
+<div class="dashboard-container">
+    <section class="card">
+        <h2>Report an Issue</h2>
+        <form class="issue-form" onsubmit="createIssue(event)">
+            <input type="text" id="title" placeholder="Issue Title" required>
+            <input type="text" id="category" placeholder="Category (Road, Water, Electricity...)" required>
+            <input type="text" id="location" placeholder="Location" required>
+            <textarea id="description" placeholder="Describe the issue in detail" required></textarea>
+            <button type="submit">Submit Issue</button>
+        </form>
+    </section>
+
+    <section class="card">
+        <h2>My Issues</h2>
+        <div id="issuesList" class="issues-list">
+        </div>
+    </section>
+
+    <section class="card">
+        <h2>Notifications</h2>
+        <ul id="notificationsList" class="notifications-list">
+        </ul>
+    </section>
+
+</div>
+
+<script src="js/config.js"></script>
+<script src="js/issues.js"></script>
+<script src="js/notifications.js"></script>
+<script>
+    window.onload = async () => {
+        await loadIssues();         // first load issues
+        await loadNotifications();  // then check notifications
+    };
+</script>
+
+
+</body>
+</html>

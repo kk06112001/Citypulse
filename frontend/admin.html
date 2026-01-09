@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CityPulse | Admin Login</title>
+    <link rel="stylesheet" href="css/admin-login.css">
+</head>
+<body>
+
+<div class="login-container">
+    <div class="login-card admin">
+        <h1>CityPulse</h1>
+        <p class="subtitle">Administrator Access</p>
+
+        <form onsubmit="adminLogin(event)">
+            <div class="input-group">
+                <input type="email" id="adminEmail" required>
+                <label>Admin Email</label>
+            </div>
+
+            <div class="input-group">
+                <input type="password" id="adminPassword" required>
+                <label>Password</label>
+            </div>
+
+            <button type="submit" class="login-btn admin-btn">Login</button>
+        </form>
+
+        <p class="admin-note">
+            Authorized personnel only
+        </p>
+    </div>
+</div>
+
+<script src="js/config.js"></script>
+<script src="js/admin.js"></script>
+
+</body>
+</html>

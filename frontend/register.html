@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CityPulse | Citizen Registration</title>
+    <link rel="stylesheet" href="css/register.css">
+</head>
+<body>
+
+<div class="register-container">
+    <div class="register-card">
+        <h1>CityPulse</h1>
+        <p class="subtitle">Citizen Registration</p>
+
+        <form onsubmit="register(event)">
+            <div class="input-group">
+                <input type="text" id="name" required>
+                <label>Full Name</label>
+            </div>
+
+            <div class="input-group">
+                <input type="email" id="email" required>
+                <label>Email Address</label>
+            </div>
+
+            <div class="input-group">
+                <input type="password" id="password" required>
+                <label>Password</label>
+            </div>
+
+            <button type="submit" class="register-btn">Create Account</button>
+        </form>
+
+        <p class="login-text">
+            Already registered? <a href="index.html">Login here</a>
+        </p>
+    </div>
+</div>
+
+<script src="js/config.js"></script>
+<script src="js/auth.js"></script>
+
+</body>
+</html>
